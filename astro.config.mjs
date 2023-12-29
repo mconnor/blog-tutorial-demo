@@ -7,4 +7,9 @@ export default defineConfig({
     output: 'static',
     site: 'https://example.com',
     integrations: [preact({ compat: true })],
+    vite: {
+        ssr: {
+            noExternal: ['open-props'],
+        },
+    },
 })

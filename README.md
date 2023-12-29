@@ -1,4 +1,16 @@
-# Astro "Build a Blog" Project - Completed
+# Astro "Build a Blog" Project - Improved
+
+This is a fork of Asto Blog Tutorial. I've made the following enhancements.
+
+- updated to Astro 4
+- moved blog post into a [content collection](https://docs.astro.build/en/guides/content-collections/#what-are-content-collections)
+- created a [shema](https://docs.astro.build/en/guides/content-collections/#defining-a-collection-schema)
+- set up and use typescript
+    - using Polymorphic on BlogPost component
+- made fixes for using preact
+- added ViewTransitions
+
+
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/blog-tutorial-demo/tree/complete)
 

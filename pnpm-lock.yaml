@@ -4,6 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  react: npm:@preact/compat@latest
+  react-dom: npm:@preact/compat@latest
+
 dependencies:
   '@astrojs/preact':
     specifier: ^3.0.2
@@ -14,6 +18,9 @@ dependencies:
   astro:
     specifier: ^4.0.8
     version: 4.0.8(typescript@5.3.3)
+  open-props:
+    specifier: ^1.6.16
+    version: 1.6.16
   preact:
     specifier: ^10.19.3
     version: 10.19.3
@@ -3273,6 +3280,10 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       mimic-fn: 4.0.0
+    dev: false
+
+  /open-props@1.6.16:
+    resolution: {integrity: sha512-QogvUMJUa/SxW5kjmZM+6bqSE2JMLKNWRbFUksEJAGYC9tmewuavHzZPq+dCeZtam+n0Q+D6DGA0DPjNeCVJNg==}
     dev: false
 
   /optionator@0.9.3:

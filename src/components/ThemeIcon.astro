@@ -30,12 +30,15 @@
         fill: transparent;
     }
 
-    :global(.dark) .sun {
-        fill: transparent;
+    :global(.dark) {
+        .sun {
+            fill: transparent;
+        }
+        .moon {
+            fill: white;
+        }
     }
-    :global(.dark) .moon {
-        fill: white;
-    }
+   
 </style>
 
 <script is:inline>
@@ -52,10 +55,11 @@
         return 'light'
     })()
 
+    const rootElement = document.documentElement;
     if (theme === 'light') {
-        document.documentElement.classList.remove('dark')
+        rootElement.classList.remove('dark')
     } else {
-        document.documentElement.classList.add('dark')
+        rootElement.classList.add('dark')
     }
 
     window.localStorage.setItem('theme', theme)

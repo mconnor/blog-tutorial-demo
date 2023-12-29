@@ -18,7 +18,7 @@ const getFormatAuth = (authorId: string) => {
     <ul>
         {
             allPosts.map((post) => (
-                <li>
+                <li class="blog-links">
                     <BlogPost
                         as="a"
                         href={'/posts/' + post.slug}
@@ -33,3 +33,15 @@ const getFormatAuth = (authorId: string) => {
         }
     </ul>
 </BaseLayout>
+
+<style>
+.blog-links {
+    & a {
+        color: var(--color-primary);
+        text-decoration: solid underline var(--brand-color) 4px;
+    }
+}
+
+
+
+</style>
