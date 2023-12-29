@@ -6,5 +6,5 @@ import preact from '@astrojs/preact'
 export default defineConfig({
     output: 'static',
     site: 'https://example.com',
-    integrations: [preact()],
+    integrations: [preact({ compat: true })],
 })

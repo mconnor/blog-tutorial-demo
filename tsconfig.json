@@ -4,6 +4,8 @@
         "verbatimModuleSyntax": true,
         "baseUrl": ".",
         "allowJs": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "preact",
         "paths": {
             "@components/*": ["src/components/*"],
             "@layouts/*": ["src/layouts/*"],
