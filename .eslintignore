@@ -22,4 +22,9 @@ pnpm-debug.log*
 .DS_Store
 
 pnpm-lock.yaml
-.vercel/
+.vercel
+/.DS_Store
+
+/src/.DS_Store
+/src/assets/.DS_Store
+.my-custom-cache-directory/
