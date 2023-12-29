@@ -1,4 +1,11 @@
 ---
-const { title, url } = Astro.props
+import type { HTMLTag, Polymorphic } from 'astro/types'
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+    as: Tag
+}>
+
+const { as: Tag, ...rest } = Astro.props
 ---
-<li><a href={url}>{title}</a></li>
+
+<Tag {...rest}><slot /></Tag>

@@ -1,20 +1,32 @@
 {
-  "name": "@example/minimal",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/preact": "^3.0.2",
-    "@astrojs/rss": "^4.0.1",
-    "astro": "^4.0.8",
-    "preact": "^10.19.3"
-  },
-  "packageManager": "pnpm@8.13.1"
+    "name": "@example/minimal",
+    "type": "module",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro check && astro build",
+        "check": "astro check",
+        "preview": "astro preview",
+        "astro": "astro",
+        "lint": "eslint  \"src/**/*.{js,ts,jsx,tsx,astro}\"",
+        "format": "prettier --write . --plugin=prettier-plugin-astro"
+    },
+    "dependencies": {
+        "@astrojs/preact": "^3.0.2",
+        "@astrojs/rss": "^4.0.1",
+        "astro": "^4.0.8",
+        "preact": "^10.19.3",
+        "typescript": "^5.3.3"
+    },
+    "packageManager": "pnpm@8.13.1",
+    "devDependencies": {
+        "@astrojs/check": "^0.3.4",
+        "@typescript-eslint/parser": "^6.16.0",
+        "eslint": "^8.56.0",
+        "eslint-plugin-astro": "^0.31.0",
+        "prettier": "^3.1.1",
+        "prettier-plugin-astro": "^0.12.3"
+    }
 }
