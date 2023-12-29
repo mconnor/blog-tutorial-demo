@@ -6,6 +6,13 @@ import preact from '@astrojs/preact'
 export default defineConfig({
     output: 'static',
     site: 'https://example.com',
+    image: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+            },
+        ],
+    },
     integrations: [preact({ compat: true })],
     vite: {
         ssr: {
