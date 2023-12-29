@@ -31,4 +31,4 @@ pnpm-debug.log*
 .DS_Store
 
 pnpm-lock.yaml
-.my-custom-cache-directory/
+/my-custom-cache-directory

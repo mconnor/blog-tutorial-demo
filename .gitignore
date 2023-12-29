@@ -26,4 +26,4 @@ pnpm-debug.log*
 
 /src/.DS_Store
 /src/assets/.DS_Store
-.my-custom-cache-directory
+/my-custom-cache-directory
