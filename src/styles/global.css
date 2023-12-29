@@ -1,18 +1,17 @@
 @import 'open-props/postcss/normalize';
 @import 'open-props/postcss/theme';
-@import 'open-props/postcss/buttons';
-@import 'open-props/postcss/buttons/light';
-@import 'open-props/postcss/buttons/dark';
+
 
 html {
-    --light-bg-color:#f1f5f9;
-    --dark-bg-color: #0d0950;
-    --dark-theme-color: #fff;
+    --light-bg-color: var(--gray-1);
+    --dark-bg-color: var(--gray-12);
+    --dark-theme-color: var(--gray-0);
     --bg-color: var(--light-bg-color);
     --color-primary: var(--dark-bg-color);
 
 
     background-color: var(--bg-color);
+  
     font-family: sans-serif;
 }
 
@@ -22,7 +21,7 @@ body {
     max-width: 80ch;
     padding: 1rem;
     line-height: 1.5;
-    --brand-color: #ff9776;
+    --brand-color: var(--orange-6);
 }
 
 * {

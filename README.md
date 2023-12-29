@@ -9,6 +9,8 @@ This is a fork of Asto Blog Tutorial. I've made the following enhancements.
     - using Polymorphic on BlogPost component
 - made fixes for using preact
 - added ViewTransitions
+- nested the global css
+- using css custom properties
 
 
 
