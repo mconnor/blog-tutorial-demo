@@ -5,7 +5,7 @@ import preact from '@astrojs/preact'
 // https://astro.build/config
 export default defineConfig({
     output: 'server',
-    site: 'https://example.com',
+    site: 'https://www.mikeconnor.tech',
     image: {
         remotePatterns: [
             {
