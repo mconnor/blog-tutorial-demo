@@ -23,7 +23,6 @@
         "sharp": "^0.33.1",
         "typescript": "^5.3.3"
     },
-    "packageManager": "pnpm@8.13.1",
     "pnpm": {
         "overrides": {
             "react": "npm:@preact/compat@latest",
@@ -43,6 +42,7 @@
         "prettier-plugin-astro": "^0.12.3"
     },
     "engines": {
-        "node": "18.x"
+        "node":  ">=18.0.0 <19.0.0",
+        "pnpm": ">=8"
     }
 }
