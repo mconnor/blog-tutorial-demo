@@ -1,8 +1,8 @@
 {
-    "name": "@example/minimal",
+    "name": "blog-tutorial-demo",
     "type": "module",
-    "version": "0.0.1",
-    "private": true,
+    "version": "0.1.0",
+    "author": "Mike Connor",
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",
@@ -16,8 +16,8 @@
     "dependencies": {
         "@astrojs/preact": "^3.0.2",
         "@astrojs/rss": "^4.0.1",
-        "@astrojs/vercel": "^6.1.1",
-        "astro": "^4.0.8",
+        "@astrojs/vercel": "^6.1.2",
+        "astro": "^4.0.9",
         "open-props": "^1.6.16",
         "preact": "^10.19.3",
         "sharp": "^0.33.1",
@@ -32,7 +32,7 @@
     },
     "devDependencies": {
         "@astrojs/check": "^0.3.4",
-        "@typescript-eslint/parser": "^6.16.0",
+        "@typescript-eslint/parser": "^6.17.0",
         "autoprefixer": "^10.4.16",
         "eslint": "^8.56.0",
         "eslint-plugin-astro": "^0.31.0",
@@ -41,5 +41,8 @@
         "postcss-preset-env": "^9.3.0",
         "prettier": "^3.1.1",
         "prettier-plugin-astro": "^0.12.3"
+    },
+    "engines": {
+        "node": "18.x"
     }
 }
