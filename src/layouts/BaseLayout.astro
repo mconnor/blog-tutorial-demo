@@ -25,6 +25,7 @@ const { pageTitle } = Astro.props
         <Header />
         <h1>{pageTitle}</h1>
         <slot />
+        <slot name="after-main" />
         <Footer />
 
         <style>
@@ -67,5 +68,8 @@ const { pageTitle } = Astro.props
                 color: var(--color-primary);
             }
         </style>
+        <script>
+            import '../scripts/menu.ts'
+        </script>
     </body>
 </html>
