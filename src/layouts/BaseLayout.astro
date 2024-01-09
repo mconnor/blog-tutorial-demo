@@ -1,8 +1,14 @@
 ---
+import 'open-props/postcss/style'
+
+/* optional imports that use the props */
+import 'open-props/postcss/normalize'
+import 'open-props/postcss/buttons'
+
 // import { ViewTransitions } from 'astro:transitions'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
-import '@styles/global.css'
+
 const { pageTitle } = Astro.props
 ---
 
@@ -20,9 +26,7 @@ const { pageTitle } = Astro.props
         <h1>{pageTitle}</h1>
         <slot />
         <Footer />
-        <script>
-            import '@scripts/menu.ts'
-        </script>
+
         <style>
             html {
                 --light-bg-color: var(--gray-1);
@@ -33,20 +37,27 @@ const { pageTitle } = Astro.props
 
                 background-color: var(--bg-color);
 
-                font-family: sans-serif;
+                font-family: var(--font-sans);
             }
 
             body {
-                margin: 0 auto;
-                width: 100%;
-                max-width: 80ch;
-                padding: 1rem;
-                line-height: 1.5;
-                --brand-color: var(--orange-6);
+                --brand-color: var(--blue-6);
 
                 & > a {
                     color: var(--color-primary);
                     text-decoration: solid underline var(--brand-color) 4px;
+                }
+                display: grid;
+                justify-items: stretch;
+                justify-content: center;
+                align-items: start;
+
+                /* grid-template: auto auto 1fr auto / 1fr; */
+
+                & > h1 {
+                    margin: 1rem 0;
+                    font-size: var(--font-size-3);
+                    border: 1px solid black;
                 }
             }
 
@@ -54,10 +65,6 @@ const { pageTitle } = Astro.props
                 background-color: var(--dark-bg-color);
                 --color-primary: var(--dark-theme-color);
                 color: var(--color-primary);
-            }
-            h1 {
-                margin: 1rem 0;
-                font-size: var(--font-size-3);
             }
         </style>
     </body>

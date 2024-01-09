@@ -14,25 +14,32 @@ const getFormatAuth = (authorId: string) => {
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-        {
-            allPosts.map((post) => (
-                <li class="blog-links">
-                    <BlogPost
-                        as="a"
-                        href={'/posts/' + post.slug}
-                        title={post.data.title}
-                    >
-                        {post.data.title}-
-                        <em>{getFormatAuth(post.data.author.id)}</em>-
-                        {post.data.pubDate.toDateString()}
-                    </BlogPost>
-                </li>
-            ))
-        }
-    </ul>
+    <div class="main">
+        <p>This is where I will post about my journey learning Astro.</p>
+        <ul>
+            {
+                allPosts.map((post) => (
+                    <li class="blog-links">
+                        <BlogPost
+                            as="a"
+                            href={'/posts/' + post.slug}
+                            title={post.data.title}
+                        >
+                            {post.data.title}-
+                            <em>{getFormatAuth(post.data.author.id)}</em>-
+                            {post.data.pubDate.toDateString()}
+                        </BlogPost>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
     <script>
         import '../scripts/menu.ts'
     </script>
+    <style>
+        .main {
+            background-image: var(--gradient-5);
+        }
+    </style>
 </BaseLayout>

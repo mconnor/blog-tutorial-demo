@@ -33,6 +33,7 @@
     },
     "devDependencies": {
         "@astrojs/check": "^0.3.4",
+        "@types/canvas-confetti": "^1.6.4",
         "@typescript-eslint/parser": "^6.17.0",
         "autoprefixer": "^10.4.16",
         "eslint": "^8.56.0",

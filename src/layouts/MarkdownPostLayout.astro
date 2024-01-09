@@ -12,8 +12,6 @@ type Props = {
 const author = await getEntry(frontmatter.author)
 ---
 
-
-
 <BaseLayout pageTitle={frontmatter.title}>
     <p>{frontmatter.pubDate.toDateString()}</p>
     <p><em>{frontmatter.description}</em></p>
@@ -32,3 +30,9 @@ const author = await getEntry(frontmatter.author)
     }
     <slot />
 </BaseLayout>
+
+<style is:global>
+    h1 {
+        color: red;
+    }
+</style>
