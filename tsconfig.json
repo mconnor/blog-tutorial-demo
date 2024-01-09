@@ -12,7 +12,8 @@
             "@content/*": ["src/content/*"],
             "@assets/*": ["src/assets/*"],
             "@styles/*": ["src/styles/*"],
-            "@scripts/*": ["src/scripts/*"]
+            "@scripts/*": ["src/scripts/*"],
+            "@img/*": ["src/img/*"]
         }
     },
     "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.astro"]

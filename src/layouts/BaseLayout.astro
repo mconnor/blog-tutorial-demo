@@ -1,8 +1,8 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import '../styles/global.css'
+// import { ViewTransitions } from 'astro:transitions'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+import '@styles/global.css'
 const { pageTitle } = Astro.props
 ---
 
@@ -13,13 +13,52 @@ const { pageTitle } = Astro.props
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
-        <ViewTransitions />
+        <!-- <ViewTransitions /> -->
     </head>
     <body>
         <Header />
         <h1>{pageTitle}</h1>
         <slot />
         <Footer />
-     
+        <script>
+            import '@scripts/menu.ts'
+        </script>
+        <style>
+            html {
+                --light-bg-color: var(--gray-1);
+                --dark-bg-color: var(--gray-12);
+                --dark-theme-color: var(--gray-0);
+                --bg-color: var(--light-bg-color);
+                --color-primary: var(--dark-bg-color);
+
+                background-color: var(--bg-color);
+
+                font-family: sans-serif;
+            }
+
+            body {
+                margin: 0 auto;
+                width: 100%;
+                max-width: 80ch;
+                padding: 1rem;
+                line-height: 1.5;
+                --brand-color: var(--orange-6);
+
+                & > a {
+                    color: var(--color-primary);
+                    text-decoration: solid underline var(--brand-color) 4px;
+                }
+            }
+
+            html.dark {
+                background-color: var(--dark-bg-color);
+                --color-primary: var(--dark-theme-color);
+                color: var(--color-primary);
+            }
+            h1 {
+                margin: 1rem 0;
+                font-size: var(--font-size-3);
+            }
+        </style>
     </body>
 </html>

@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config'
 import vercel from '@astrojs/vercel/serverless'
 import preact from '@astrojs/preact'
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-    output: 'server',
+    output: 'static',
     site: 'https://www.mikeconnor.tech',
     image: {
         remotePatterns: [
@@ -13,12 +14,12 @@ export default defineConfig({
             },
         ],
     },
-    integrations: [preact({ compat: true })],
+    integrations: [preact({ compat: true }), mdx()],
     vite: {
         ssr: {
             noExternal: ['open-props'],
         },
     },
-    adapter: vercel(),
+    // adapter: vercel(),
     cacheDir: './my-custom-cache-directory'
 })
