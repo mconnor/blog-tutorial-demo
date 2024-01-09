@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import ConfettiButton from '@components/ConfettiButton.astro'
 
 const pageTitle = 'About Me'
 const happy = true
@@ -32,6 +33,7 @@ const textCase = 'uppercase'
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
+    <ConfettiButton />
     <h2 transition:animate="slide">... and my new Astro site!</h2>
 
     <p>
